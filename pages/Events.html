@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Events</title>
+</head>
+<body>
+  <header>
+    <img src="" alt="">
+    <nav>
+      <a href="../index.html">Acceuil</a>&nbsp;&nbsp;&nbsp;
+      <a href="../pages/Parcours.html">Parcours</a>&nbsp;&nbsp;&nbsp;
+      <a href="../pages/Competences.html">Competences</a>&nbsp;&nbsp;&nbsp;
+      <a href="../pages/Experience.html">Experience</a>&nbsp;&nbsp;&nbsp;
+      <a href="../pages/Events.html">Events</a>&nbsp;&nbsp;&nbsp;
+      <a href="../pages/Documents.html">Documents</a>&nbsp;&nbsp;&nbsp;
+      <a href="../pages/Quiz.html">Quiz</a>&nbsp;&nbsp;&nbsp;
+      <a href="../pages/Contact.html">Contact</a>&nbsp;&nbsp;&nbsp;
+      <a href="../pages/IIT.html">IIT</a>&nbsp;&nbsp;&nbsp;
+    </nav>
+  </header>  
+
+  <div class="event">
+    <h1><i class="fas fa-laptop-code"></i>&nbsp;&nbsp;E V E N T S</h1>
+    <div class="body">
+      
+      <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <div class="numbertext">1 /4</div>
+          <img src="../images/journée d'integrationG6.jpg" style="width:100%">
+          <div class="text">Journée d'integration</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">2 /4 </div>
+          <img src="../images/journée d'integration2.jpg" style="width:100%">
+          <div class="text">Journée d'integration</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 4</div>
+          <img src="../images/pyone2.jpg" style="width:100%">
+          <div class="text">P Y O N E</div>
+        </div>
+        <div class="mySlides fade">
+          <div class="numbertext">4/ 4</div>
+          <img src="../images/pyone1.jpg" style="width:100% ">
+          <div class="text">P Y O N E</div>
+        </div>
+       
+        
+        
+        
+      
+        
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+        
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+          <span class="dot" onclick="currentSlide(3)"></span> 
+          <span class="dot" onclick="currentSlide(4)"></span> 
+         
+          
+        </div>
+        
+    </div>
+
+
+  </div>
+  <footer>
+
+    <div class="box">
+        <h3> B I E N V E N U E</h3>
+        <p> Merci d'avoir visit&eacute; <br> mon site web <br> personel </p>
+    </div>
+
+    <div class="box">
+        <h3>C O N T A C T </h3>
+        <P><i class="fas fa-map-marked-alt"></i> route Mahdia km3, Sfax </P>
+        <P> <i class="fas fa-phone"></i> +216 54 696 669 </P>
+        <P><i class="fas fa-envelope"></i> fekinour25@gmail.com </P>
+        <div class="share">
+
+            <a href="https://www.linkedin.com/in/nour-feki/" class="fab fa-linkedin" aria-label="LinkedIn" target="_blank"></a>&nbsp;&nbsp;&nbsp;
+            <a href="https://github.com/Nour2529" class="fab fa-github" aria-label="GitHub" target="_blank"></a>&nbsp;&nbsp;&nbsp;
+            <a href="mailto:fekinour25@gmail.com" class="fas fa-envelope" aria-label="Mail" target="_blank"></a>&nbsp;&nbsp;&nbsp;
+            
+        </div>
+
+    </div>
+    <div class="box">
+        <h3>N E W S L E T T E R </h3>
+        <p>Si vous voulez conna&icirc;tre <br> mes nouveaut&eacute;s vous pouvez  <br> m'envoyez votre e-mail</p>
+        <P> <input type="text" ><button>Envoyez</button> </P>
+
+    </div>
+</footer>
+
+<script>
+  let slideIndex = 1;
+  showSlides(slideIndex);
+  
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  
+  function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+  }
+  </script>
+  
+</body>
+</html>
